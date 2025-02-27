@@ -31,5 +31,8 @@
     "eslint-config-next": "15.2.0-canary.76",
     "tailwindcss": "^4",
     "typescript": "^5"
+  },
+  "overrides": {
+    "next": "15.2.0-canary.76"
   }
 }
