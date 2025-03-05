@@ -11,10 +11,7 @@ import { toast } from "sonner";
 
 function TitleGenerations({ videoId }: { videoId: string }) {
   const { user } = useUser();
-  //   const titles = useQuery(api.titles.list, { videoId, userId: user?.id ?? "" });
-  const titles: { title: string; _id: string }[] = [];
-
-  console.log(user, titles, videoId);
+  const titles = useQuery(api.titles.list, { videoId, userId: user?.id ?? "" });
 
   const { value: isTitleGenerationEnabled } = useSchematicEntitlement(
     FeatureFlag.TITLE_GENERATIONS
@@ -47,7 +44,7 @@ function TitleGenerations({ videoId }: { videoId: string }) {
                 className="opacity-0 group-hover:opacity-100 transition-opacity duration-200 p-1.5 hover:bg-blue-100 rounded-md"
                 title="Copy to clipboard"
               >
-                <Copy className="w-4 h-4 text-[#003900]" />
+                <Copy className="w-4 h-4 text-blue-600" />
               </button>
             </div>
           </div>

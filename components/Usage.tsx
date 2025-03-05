@@ -6,7 +6,6 @@ import {
   useSchematicIsPending,
 } from "@schematichq/schematic-react";
 import { Progress } from "./ui/progress";
-import { useEffect } from "react";
 
 function Usage({
   featureFlag,
@@ -20,24 +19,7 @@ function Usage({
     featureAllocation,
     featureUsage,
     value: isFeatureEnabled,
-    featureUsageExceeded,
-    companyId,
-    flag,
-    reason,
-    featureUsagePeriod,
-    ruleType,
   } = useSchematicEntitlement(featureFlag);
-
-  useEffect(() => {
-    console.log(featureAllocation, `for ${flag}`);
-    console.log(featureUsage);
-    console.log("flag - ", flag);
-    console.log("reason - ", reason);
-    console.log("Feature Usage - ", featureUsagePeriod);
-    console.log("Rule Type - ", ruleType);
-    console.log("company id - ", companyId);
-    console.log("featureUsageExceeded - ", featureUsageExceeded);
-  }, [featureAllocation, flag, featureUsage]);
 
   const hasUsedAllTokens =
     featureUsage && featureAllocation && featureUsage >= featureAllocation;
@@ -105,7 +87,7 @@ function Usage({
   const progressColor = getProgressColor(progress);
 
   return (
-    <div className="bg-white rounded-2xl shadow-sm border border-gray-100 p-6 opacity-50">
+    <div>
       <div className="flex justify-between items-center mb-4 gap-4">
         <h2 className="text-xl font-semibold text-gray-800">{title}</h2>
         <div className="px-4 py-2 bg-gray-50 rounded-lg">
