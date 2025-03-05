@@ -116,7 +116,7 @@ export default function Home() {
               return (
                 <div
                   key={index}
-                  className="bg-white p-6 rounded-xl border border-gray-200 hover:border-blue-500 transition-all duration-300"
+                  className="bg-white cursor-pointer p-6 rounded-xl border border-gray-200 hover:border-[#003900] transition-all duration-300"
                 >
                   <div
                     className={`w-12 h-12 rounded-lg flex items-center justify-center mb-4 ${feature.iconBg}`}

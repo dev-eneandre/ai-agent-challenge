@@ -44,7 +44,7 @@ function TitleGenerations({ videoId }: { videoId: string }) {
                 className="opacity-0 group-hover:opacity-100 transition-opacity duration-200 p-1.5 hover:bg-blue-100 rounded-md"
                 title="Copy to clipboard"
               >
-                <Copy className="w-4 h-4 text-blue-600" />
+                <Copy className="w-4 h-4 text-[#003900]]" />
               </button>
             </div>
           </div>
