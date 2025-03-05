@@ -1,29 +1,25 @@
 "use client";
 
 import { SchematicProvider } from "@schematichq/schematic-react";
-import { ClerkProvider } from "@clerk/nextjs";
 import SchematicWrapped from "./SchematicWrapped";
+import { ConvexClientProvider } from "./ConvexClientProvider";
 
 export default function ClientWrapper({
   children,
 }: Readonly<{
   children: React.ReactNode;
 }>) {
-  // check if env exists 
   const schematicPubKey = process.env.NEXT_PUBLIC_SCHEMATIC_PUBLISHABLE_KEY;
-  if(!schematicPubKey){
+  if (!schematicPubKey) {
     throw new Error(
-      "No Wschematic Publishable key found, please add it in your .env.local file"
-    )
+      "No Schematic Publishable Key found. Please add it to your .env.local file."
+    );
   }
   return (
-    <ClerkProvider>
+    <ConvexClientProvider>
       <SchematicProvider publishableKey={schematicPubKey}>
-        <SchematicWrapped>
-        {children}
-        </SchematicWrapped>
+        <SchematicWrapped>{children}</SchematicWrapped>
       </SchematicProvider>
-    
-    </ClerkProvider>
+    </ConvexClientProvider>
   );
 }

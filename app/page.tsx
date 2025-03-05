@@ -1,4 +1,5 @@
 import AgentPulse from "@/components/AgentPulse";
+import YoutubeVideoForm from "@/components/YoutubeVideoForm";
 import {
   Brain,
   Image as ImageIcon,
@@ -30,8 +31,8 @@ const features = [
     description:
       "Get deep insights into your video content with our advanced AI analysis. Understand viewer engagement and content quality.",
     icon: Brain,
-    iconBg: "bg-blue-100",
-    iconColor: "text-blue-600",
+    iconBg: "bg-[#007200]",
+    iconColor: "text-[#003900]",
   },
   {
     title: "Smart Transcription",
@@ -82,20 +83,21 @@ export default function Home() {
       <section className="py-20 bg-gradient-to-b from-white to-gray-50">
         <div className="container mx-auto px-4">
           <div className="flex flex-col items-center gap-10 text-center mb-12">
-            <AgentPulse size="large" color="blue" />
+            <AgentPulse size="large" color="green" />
 
             <h1 className="text-4xl md:text-6xl font-bold text-gray-900 mb-6">
               Meet Your Personal{" "}
-              <span className="bg-gradient-to-r from-blue-600 to-blue-400 bg-clip-text text-transparent">
+              <span className="bg-gradient-to-r from-[#003900] to-[#007200]  bg-clip-text text-transparent">
                 AI Content Agent
               </span>
             </h1>
 
-
             <p className="text-xl text-gray-600 mb-8 max-w-2xl mx-auto">
-Transform your video content with AI-powered analysis,
-transcrption, and insights. Get started in seconds.
+              Transform your video content with AI-powered analysis,
+              transcription, and insights. Get started in seconds.
             </p>
+
+            <YoutubeVideoForm />
           </div>
         </div>
       </section>
@@ -147,7 +149,7 @@ transcrption, and insights. Get started in seconds.
                   key={index}
                   className="text-center p-6 rounded-xl bg-white shadow-md hover:shadow-lg transition-all"
                 >
-                  <div className="w-16 h-16 bg-gradient-to-r from-blue-600 to-blue-400 rounded-full flex items-center justify-center mx-auto mb-4">
+                  <div className="w-16 h-16 bg-gradient-to-r from-[#003900] to-[#007200]  rounded-full flex items-center justify-center mx-auto mb-4">
                     <Icon className="w-8 h-8 text-white" />
                   </div>
                   <h3 className="text-xl font-semibold mb-2">{step.title}</h3>
@@ -160,7 +162,7 @@ transcrption, and insights. Get started in seconds.
       </section>
 
       {/* Footer section */}
-      <section className="py-20 px-4 md:px-0 bg-gradient-to-r from-blue-600 to-blue-400">
+      <section className="py-20 px-4 md:px-0 bg-gradient-to-r from-[#003900] to-[#007200] ">
         <div className="text-center">
           <h2 className="text-3xl font-bold text-white mb-6">
             Ready to Meet Your AI Content Agent?
